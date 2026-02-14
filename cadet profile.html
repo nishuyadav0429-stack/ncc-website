@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>NCC Cadet Profile System</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body {
+            background: #0b1d0b;
+            color: white;
+            font-family: poppins, sans-serif;
+        }
+
+        /* Card Design */
+        .card {
+            background: #132913;
+            border: 1px solid #2e7d32;
+            box-shadow: 0 0 18px rgba(0, 255, 120, .25);
+        }
+
+        h2 {
+            font-weight: 800;
+            color: #7CFC9A;
+        }
+
+        label {
+            color: #a5ffb1;
+            font-weight: 600;
+        }
+
+        .form-control {
+            background: #e8f5e9;
+            color: #000;
+            border: 1px solid #66bb6a;
+        }
+
+        .btn-success {
+            font-weight: bold;
+            background: #2e7d32;
+            border: none;
+        }
+
+        .btn-success:hover {
+            background: #1b5e20;
+        }
+
+        /* Navigation Buttons */
+        .nav-btn {
+            position: fixed;
+            bottom: 22px;
+            padding: 9px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 15px;
+            background: #2e7d32;
+            border: none;
+            color: white;
+            z-index: 9999;
+            transition: .25s;
+            text-decoration: none;
+        }
+
+        .nav-btn:hover {
+            background: #1b5e20;
+        }
+
+        #backBtn {
+            left: 22px;
+        }
+
+        #homeBtn {
+            right: 22px;
+        }
+    </style>
+</head>
+
+<body class="text-center p-5">
+
+    <!-- Title -->
+    <h2>🪖 NCC Cadet Profile</h2>
+    <p>Enter Cadet Details & NCC Information</p>
+
+    <hr class="text-secondary w-75 mx-auto">
+
+    <!-- Profile Form -->
+    <form action="/cadet_profile" method="POST"
+        class="card p-4 w-50 mx-auto mt-4 text-start">
+
+        <!-- Name -->
+        <label>Cadet Full Name</label>
+        <input type="text" name="name" class="form-control mb-3" required>
+
+        <!-- Enrollment -->
+        <label>Enrollment Number</label>
+        <input type="text" name="enroll" class="form-control mb-3" required>
+
+        <!-- Unit -->
+        <label>NCC Unit / Battalion</label>
+        <input type="text" name="unit" class="form-control mb-3"
+            placeholder="Eg: 1 Maharashtra Battalion">
+
+        <!-- Rank -->
+        <label>Cadet Rank</label>
+        <select name="rank" class="form-control mb-3">
+            <option>Cadet</option>
+            <option>Lance Corporal</option>
+            <option>Corporal</option>
+            <option>Sergeant</option>
+            <option>Under Officer</option>
+            <option>Senior Under Officer</option>
+        </select>
+
+        <!-- Wing -->
+        <label>NCC Wing</label>
+        <select name="wing" class="form-control mb-3">
+            <option>Army Wing</option>
+            <option>Navy Wing</option>
+            <option>Air Wing</option>
+        </select>
+
+        <!-- Year -->
+        <label>Training Year</label>
+        <select name="year" class="form-control mb-3">
+            <option>1st Year</option>
+            <option>2nd Year</option>
+            <option>3rd Year</option>
+        </select>
+
+        <!-- Camp -->
+        <label>Camp Attended</label>
+        <select name="camp" class="form-control mb-3">
+            <option>ATC</option>
+            <option>CATC</option>
+            <option>RDC</option>
+            <option>TSC</option>
+            <option>NIC</option>
+            <option>None</option>
+        </select>
+
+        <!-- Submit -->
+        <button class="btn btn-success w-100">
+            Save Cadet Profile 🎖
+        </button>
+
+    </form>
+
+    <!-- Navigation Buttons -->
+    <button onclick="history.back()" id="backBtn"
+        class="nav-btn">⬅ Back</button>
+
+    <a href="dashboard.html" id="homeBtn"
+        class="nav-btn">🏠 Home</a>
+
+</body>
+
+</html>
